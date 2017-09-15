@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/res__cancel_toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       >
+       <include layout="@layout/item_news_header"/>
+       <android.support.v4.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:fillViewport="true"
+
+           >
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:padding="16dp"
+                   >
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/HeaderTextStyle"
+                       android:text="«Предложил судье свои очки, но он и этого не увидел». В Европе новый супертренер"
+                       android:layout_marginTop="8dp"
+                       android:layout_marginBottom="8dp"
+                       />
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       style="@style/BodyTextStyle"
+                       android:layout_marginTop="8dp"
+                       android:layout_marginBottom="8dp"
+                       android:text="Прошлогодний чемпионат Европы он смотрел в своем доме на окраине Вены, но девятнадцатого июня его попросили на пару дней вернуться в Германию – сняться в шоу Рейнольда Бекманна «Спортшкола» на канале ARD. \n \n Во время эфира Россия проиграла Уэльсу 0:3, и Леонид Слуцкий объявил об отставке. Зачитав эту новость, ведущий подмигнул Штегеру: «Петер, пост свободен. Езжай в Россию!» – «Нет-нет, я останусь в «Кельне». Через три месяца, разгромив «Фрайбург», «Кельн» поднялся на первое место. После матча Штегер, как обычно, встретился с болельщиками на западной трибуне стадиона «Рейн Энерги»: «Это всего на сутки. Завтра «Бавария» вернет себе лидерство». Затем Штегер надел розовые кожаные штаны и поехал на кельнский пивной фестиваль, который вела его девушка. Там он в 00:19 прочитал твит канцлера Австрии Кристиана Керна: «Какая радость! Австрийский тренер – номер один в бундеслиге»."
+                       />
+               </LinearLayout>
+           </android.support.v7.widget.CardView>
+       </android.support.v4.widget.NestedScrollView>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:background="@color/white"
+           android:gravity="center"
+           android:orientation="vertical"
+
+           >
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_gravity="center"
+               android:gravity="center"
+               >
+               <android.support.v7.widget.AppCompatImageView
+                   android:layout_width="14dp"
+                   android:layout_height="14dp"
+                   android:gravity="center"
+
+                   app:srcCompat="@drawable/highlight_icon_comment"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:maxLines="2"
+                   style="@style/PrimaryButton"
+                   android:layout_gravity="top"
+                   android:text="20 комменты"
+                   android:layout_weight="1"
+                   android:gravity="top"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+   </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
