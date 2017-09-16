@@ -48,7 +48,7 @@ public class ChooseAdapter extends RecyclerView.Adapter<ChooseAdapter.Holder> {
         }else {
 
             holder.title.setBackgroundDrawable(ctx.getResources().getDrawable(R.drawable.bg_click_accent_light));
-            holder.title.setTextColor(ctx.getResources().getColor(R.color.white));
+            holder.title.setTextColor(ctx.getResources().getColor(R.color.primaryText));
 
         }
         holder.title.setText(chooseDate.getTitle());

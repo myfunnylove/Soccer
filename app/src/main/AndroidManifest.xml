@@ -20,6 +20,7 @@
 
         <activity android:name=".mvp.newsDetail.NewsDetailActivity"></activity>
         <activity android:name=".mvp.statistics.StatisticsDetailActivity"></activity>
+        <activity android:name=".mvp.comment.CommentActivity"></activity>
     </application>
 
 </manifest>

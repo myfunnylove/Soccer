@@ -50,4 +50,7 @@
     <string name="lenta">Лента</string>
     <string name="table">Таблица</string>
     <string name="calendar">Календарь</string>
+    <string name="reply">Ответить</string>
+    <string name="newComment">Новые</string>
+    <string name="popularComment">Популярные</string>
 </resources>

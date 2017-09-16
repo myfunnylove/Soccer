@@ -2,8 +2,11 @@ package locidnet.soccer.uz.util;
 
 import java.util.ArrayList;
 
+import locidnet.soccer.uz.adapter.MatchTableAdapter;
 import locidnet.soccer.uz.model.ChooseDate;
+import locidnet.soccer.uz.model.Comment;
 import locidnet.soccer.uz.model.Match;
+import locidnet.soccer.uz.model.MatchTable;
 import locidnet.soccer.uz.model.News;
 
 /**
@@ -54,4 +57,43 @@ public class Demo {
         choose.add(new ChooseDate("Месяць",false));
         choose.add(new ChooseDate("Выберите дату",false));
     }
+
+    public static ArrayList<MatchTable> tableAdapters;
+    static {
+        tableAdapters = new ArrayList<>();
+        tableAdapters.add(new MatchTable(1,"Лига 1","1","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","1","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","2","","Реал Мадрид","3","2","1","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","3","","Атлетико Мадрид","1","0","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","4","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","5","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","6","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","7","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","8","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","9","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","10","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","11","","Барселона","3","3","3","3","3"));
+        tableAdapters.add(new MatchTable(1,"Лига 1","12","","Барселона","3","3","3","3","3"));
+    }
+    public static ArrayList<Comment> comments;
+    static {
+        comments = new ArrayList<>();
+        comments.add(new Comment(1,"","Johnny","Сегодня","Приятно, что Карпина благодарит и не забывает","30"));
+        comments.add(new Comment(1,"","Smith","Сегодня","Марко сейчас играет как молодой Рон но более умно. Не просто забивает а еще и отдает и может разрезать всю оборону одним пасом. Держатся за него надо. Если не сломается через пару лет будет нр.1 игроком в мире","10"));
+        comments.add(new Comment(1,"","Ария","Сегодня","Ты видел как играл молодой Рон? Асенсио и близко не подобрался пока. Реально запустили пиар машину. Видать Реалу нужно новое лицо после Рона.","4"));
+        comments.add(new Comment(1,"","Дима","Сегодня","Криштиану-2006 (ему тогда было столько же лет как и Асенсио сейчас) НИ В ЧЕМ не превосходит нынешнего Марко. О шикарных голах в ворота Баварии, Ювентуса и Барсы Криш тогда мог только мечтать. И удар поставленный у него появился немного позже, а Асенсио за свои 15 месяцев в РМ уже забил целую кучу голов с дальних дистанций (2 Барсе, 2 Валенсии, Севилье в суперкубке в прошлом году, 2 Македонии на Евро до 21 этим летом и так далее). Криш тогда был мальчиком с хорошим потенциалом и неплохими финтами для нарезок на Youtube - но не более. Марко в свою очередь уже сейчас является готовым исполнителем, у него все атакующие качества развиты на высоком уровне, что он регулярно и показывает.\n" +
+                "\n" +
+                "P.S. Я болела Барсы, и у меня горит, потому что в 2014 Барса отказалась платить 4 миллиона за Асенсио, но затем за 6 купила Дугласа...думаю, комментарии не требуются.","-65"));
+        comments.add(new Comment(1,"","Артур","Сегодня","Смешно. Рона сменить на Левандовски ? Вы долго в запое ? ))","0"));
+        comments.add(new Comment(1,"","Вася","Сегодня","Голешники, что она забивал Барсе и Севельи Салах не положит","0"));
+        comments.add(new Comment(1,"","Johnny","Сегодня","з - зависть\n" +
+                "\n" +
+                "с - сектанта","0"));
+        comments.add(new Comment(1,"","Маша","Сегодня","побуду занудой: отступные это не стоимость игрока, стоимость это та сумма, которую готовы заплатить","-1"));
+        comments.add(new Comment(1,"","Пака","Сегодня","Тогда легенда футбола не играла","1"));
+        comments.add(new Comment(1,"","Кекм","Сегодня","Скалетка - нехороший человек\n" +
+                "\n" +
+                "xaaxaxaxaxaxaxaxa","0"));
+    }
+
 }
