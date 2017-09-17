@@ -3,11 +3,13 @@ package locidnet.soccer.uz.mvp.newsDetail;
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import butterknife.BindView;
@@ -36,6 +38,8 @@ public class NewsDetailActivity extends BaseActivity {
     LinearLayout commentBox;
 
 
+    @BindView(R.id.commentBtn)
+    Button commentBtn;
     @Override
     protected int getLayout() {
         return R.layout.activity_news_detail;
@@ -47,6 +51,9 @@ public class NewsDetailActivity extends BaseActivity {
         commentBox.setOnClickListener(view -> {
             startActivity(new Intent(this, CommentActivity.class));
         });
+
+        commentBtn.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(getResources(),R.drawable.white_icon_comment,this.getTheme()),null,null,null);
+        commentBtn.setText("20 комменты");
     }
 
     @Override
@@ -60,7 +67,7 @@ public class NewsDetailActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle(getResources().getString(R.string.app_name));
+        getSupportActionBar().setTitle(getResources().getString(R.string.news_detail));
 
         toolbar.setNavigationOnClickListener(view -> {
             onBackPressed();

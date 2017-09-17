@@ -1,12 +1,14 @@
 package locidnet.soccer.uz.mvp.main;
 
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -105,10 +107,23 @@ public class MainActivity extends BaseActivity {
 
     private void initTablayout() {
         tabLayout.setupWithViewPager(pager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.style_select_news);
-        tabLayout.getTabAt(1).setIcon(R.drawable.style_select_soccer);
-        tabLayout.getTabAt(2).setIcon(R.drawable.style_select_analize);
-        tabLayout.getTabAt(3).setIcon(R.drawable.style_select_settings);
+//        tabLayout.getTabAt(0).setIcon(VectorDrawableCompat.create(getResources(),R.drawable.style_select_news,this.getTheme()));
+//        tabLayout.getTabAt(1).setIcon(VectorDrawableCompat.create(getResources(),R.drawable.style_select_soccer,this.getTheme()));
+//        tabLayout.getTabAt(2).setIcon(VectorDrawableCompat.create(getResources(),R.drawable.style_select_analize,this.getTheme()));
+//        tabLayout.getTabAt(3).setIcon(VectorDrawableCompat.create(getResources(),R.drawable.style_select_settings,this.getTheme()));
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            tabLayout.getTabAt(0).setIcon(R.drawable.style_select_news);
+            tabLayout.getTabAt(1).setIcon(R.drawable.style_select_soccer);
+            tabLayout.getTabAt(2).setIcon(R.drawable.style_select_analize);
+            tabLayout.getTabAt(3).setIcon(R.drawable.style_select_settings);
+        }else{
+            tabLayout.getTabAt(0).setIcon(R.drawable.primary_icon_news);
+            tabLayout.getTabAt(1).setIcon(R.drawable.primary_icon_soccer);
+            tabLayout.getTabAt(2).setIcon(R.drawable.primary_icon_analize);
+            tabLayout.getTabAt(3).setIcon(R.drawable.primary_icon_settings);
+        }
+
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
