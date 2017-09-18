@@ -30,7 +30,7 @@
                 app:tabTextColor="@color/bodyText"
                 app:tabIndicatorColor="@color/colorAccent"
                 app:tabIndicatorHeight="2dp"
-                app:tabMode="scrollable"
+                app:tabMode="fixed"
                 style="@style/TABLAYOUT"
                 />
         </android.support.design.widget.AppBarLayout>

@@ -53,4 +53,6 @@
     <string name="reply">Ответить</string>
     <string name="newComment">Новые</string>
     <string name="popularComment">Популярные</string>
+    <string name="comments">Комментарии</string>
+    <string name="news_detail">Новость</string>
 </resources>

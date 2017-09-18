@@ -1,8 +1,11 @@
 package locidnet.soccer.uz.mvp.comment;
 
+import android.support.annotation.BinderThread;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
@@ -49,6 +52,11 @@ public class CommentActivity extends BaseActivity {
     @BindView(R.id.pager)
     ViewPager pager;
 
+
+    @BindView(R.id.edit)
+    FloatingActionButton editFAB;
+
+
     @Override
     protected int getLayout() {
         return R.layout.activity_comment;
@@ -65,11 +73,13 @@ public class CommentActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle(getResources().getString(R.string.statistics));
+        getSupportActionBar().setTitle(getResources().getString(R.string.comments));
 
         toolbar.setNavigationOnClickListener(view -> {
             onBackPressed();
         });
+
+        editFAB.setImageDrawable(VectorDrawableCompat.create(getResources(),R.drawable.white_icon_edit,this.getTheme()));
     }
     private void initPager() {
         mainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),initFragments());
